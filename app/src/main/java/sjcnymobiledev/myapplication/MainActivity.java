@@ -35,7 +35,27 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-    }
+        //Second new button
+        final Button button2 = (Button) findViewById(R.id.button2);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Success")
+                        .setMessage("New button has been added!")
+                        .setPositiveButton(android.R.string.ok,new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        })
+                        .show();
+            }
+        });
+
+        }
+
+
+
 
 
     @Override
